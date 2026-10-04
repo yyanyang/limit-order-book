@@ -16,9 +16,19 @@ int main()
     engine.printOrders();
 
     engine.submitOrder({orderNo++, Side::buy, 100.50, 120});
+    std::cout << "\n***** Match buy *******************" << std::endl;
     engine.printOrders();
 
     engine.submitOrder({orderNo++, Side::sell, 100.00, 120});
+    std::cout << "\n***** Match sell *******************" << std::endl;
+    engine.printOrders();
+
+    engine.submitOrder({orderNo++, Side::sell, 100.05, 100});
+    std::cout << "\n***** Match sell *******************" << std::endl;
+    engine.printOrders();
+
+    engine.submitOrder({orderNo++, Side::buy, 100.30, 100});
+    std::cout << "\n***** Match buy *******************" << std::endl;
     engine.printOrders();
 
     std::cout << "\n***** Trades *******************" << std::endl;
