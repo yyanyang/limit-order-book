@@ -2,7 +2,7 @@
 
 A simplified limit order book and matching engine implemented in modern C++20.
 
-This project was developed as a personal project to strengthen modern C++ skills and explore the software engineering concepts used in financial trading systems.
+This project was developed as a personal project to strengthen modern C++ skills.
 
 ## Features
 
