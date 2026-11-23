@@ -30,7 +30,7 @@ ostream& operator<<(ostream& os, const OrderBook& ob)
         {
             os << order.id << " "
                 << (static_cast<int>(order.side) == 0 ? "buy" : "sell") << " "
-                << order.price << " "
+                << static_cast<double>(order.price) / 100.0 << " "
                 << order.quantity << std::endl;
         }
     }
@@ -44,7 +44,7 @@ ostream& operator<<(ostream& os, const OrderBook& ob)
         {
             os << order.id << " "
                 << (static_cast<int>(order.side) == 0 ? "buy" : "sell") << " "
-                << order.price << " "
+                << static_cast<double>(order.price) / 100.0 << " "
                 << order.quantity << std::endl;
         }
     }
@@ -56,7 +56,7 @@ ostream& operator<<(ostream& os, const OrderBook& ob)
         std::list<Order>::iterator itOrder = it->second;
         os << itOrder->id << " "
             << (static_cast<int>(itOrder->side) == 0 ? "buy" : "sell") << " "
-            << itOrder->price << " "
+            << static_cast<double>(itOrder->price) / 100.0 << " "
             << itOrder->quantity << std::endl;        
     }
     return os;    

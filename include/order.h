@@ -16,8 +16,8 @@ struct Order
 {
     OrderId id;
     Side side;
-    double price;
-    uint32_t quantity;
+    uint64_t price;
+    uint64_t quantity;
 };
 
 #endif

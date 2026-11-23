@@ -15,8 +15,8 @@ using OrderList = std::list<Order>;
 class OrderBook
 {
 private:
-    std::map<double, OrderList> asks_;
-    std::map<double, OrderList, std::greater<>> bids_;
+    std::map<uint64_t, OrderList> asks_;
+    std::map<uint64_t, OrderList, std::greater<>> bids_;
 
     std::unordered_map<OrderId, OrderList::iterator> orderLookup_;
 

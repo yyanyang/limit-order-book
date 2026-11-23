@@ -91,7 +91,7 @@ void MatchingEngine::printOrders() const
 
 ostream& operator<<(ostream& os, const Trade& trade)
 {
-    os << "Trade: " << trade.quantity << " @ " << trade.price 
+    os << "Trade: " << trade.quantity << " @ " << static_cast<double>(trade.price) / 100.0
         << " Buy #" << trade.buyOrderId 
         << " Sell #" << trade.sellOrderId << std::endl;
     return os;    

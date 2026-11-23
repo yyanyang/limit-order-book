@@ -32,8 +32,8 @@ struct Trade
 {
     OrderId buyOrderId;
     OrderId sellOrderId;
-    double price;
-    uint32_t quantity;
+    uint64_t price;
+    uint64_t quantity;
 
     friend ostream& operator<<(ostream& os, const Trade& trade);
 };
