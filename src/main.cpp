@@ -4,7 +4,7 @@
 #include <system_error>
 #include "MatchingEngine.h" 
 
-uint64_t toPriceTicks(const std::string& price);
+uint64_t toPriceTicks(const std::string_view price);
 
 int main()
 {
@@ -44,7 +44,7 @@ int main()
     return 0;
 }
 
-uint64_t toPriceTicks(const std::string& price)
+uint64_t toPriceTicks(const std::string_view price)
 {
     const auto dot = price.find('.');
 
